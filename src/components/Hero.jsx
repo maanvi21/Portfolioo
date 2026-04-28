@@ -83,7 +83,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.45, duration: 0.6 }}
           >
-            "I engineer high-availability ML pipelines and user-centric full-stack products. From optimizing RAG retrieval to deploying scalable enterprise systems, I bridge the gap between complex data and real-world impact."
+            "I've built RAG pipelines at Altimetrik, deployed fault detection ML systems at IIT Bombay, and shipped products for clients like CIBA Mumbai — all before finishing my degree. I don't wait to get good. I just build."
           </motion.p>
 
           <motion.p
