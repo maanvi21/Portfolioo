@@ -9,25 +9,12 @@ const About = () => {
 
         {/* Left — bio text */}
         <div className="about-text">
-          <div className="section-label">About</div>
-          <h2 className="section-title">Not just models.<br />Production systems.</h2>
+          <div className="section-label">Philosophy</div>
+          <h2 className="section-title">Beyond the Code.</h2>
 
           <div className="about-paragraphs">
             <p>
-              I'm a third-year Computer Engineering student at FCRIT, Vashi, specialising in AI/ML —
-              with a focus on building systems that actually work in production, not just in notebooks.
-            </p>
-            <p>
-              I've built RAG pipelines at Altimetrik, deployed ML fault detection systems at IIT Bombay,
-              shipped live client products through my own freelance venture Kode & Co., and won 1st place
-              at TechNova 2025 for building a community social app from scratch in 24 hours.
-            </p>
-            <p>
-              What sets me apart is the combination: I can design a vector retrieval pipeline in the morning,
-              build the API that serves it in the afternoon, and translate it into a user-centric product by evening.
-              I apply design thinking to ensure every technical architecture solves a real human problem.
-            </p>
-            <p className="about-highlight">
+              I bridge the gap between complex ML architectures and intuitive product experiences. 
               Currently looking to bring this end-to-end ownership to high-impact AI and data-driven product teams.
             </p>
 
@@ -42,7 +29,7 @@ const About = () => {
               </div>
               <div className="principle">
                 <span className="principle-dot" />
-                <span><strong>Design Thinking</strong>: Bridging the gap between complex ML architectures and intuitive product experiences.</span>
+                <span><strong>Design Thinking</strong>: Translating business needs into technical scopes that actually ship.</span>
               </div>
             </div>
           </div>
