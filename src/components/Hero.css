@@ -261,12 +261,13 @@
   }
 
   .hero-name {
-    font-size: clamp(2.8rem, 8vw, 4rem);
+    font-size: clamp(1.8rem, 8vw, 3.5rem);
+    word-break: break-word;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-section { padding-top: 100px; }
-  .hero-name { font-size: 2.8rem; }
-  .hero-tagline { font-size: 1rem; }
+  .hero-section { padding-top: 80px; }
+  .hero-name { font-size: 2.2rem; }
+  .hero-tagline { font-size: 0.95rem; }
 }

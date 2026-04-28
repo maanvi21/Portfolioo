@@ -55,6 +55,24 @@
   overflow: hidden;
 }
 
+.contact-email-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  flex: 1;
+}
+
+.email-primary {
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.87rem;
+}
+
+.email-secondary {
+  color: var(--text-3);
+  font-size: 0.75rem;
+}
+
 .contact-link-row:hover {
   border-color: var(--border-accent);
   color: var(--accent);

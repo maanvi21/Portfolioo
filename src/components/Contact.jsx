@@ -25,9 +25,12 @@ const Contact = () => {
               If you have an idea or an opening — let's talk.
             </p>
             <div className="contact-links-group">
-              <a href="mailto:shadaksharimaanvi@gmail.com" className="contact-link-row">
+              <a href="mailto:maanvishadakshari21@gmail.com" className="contact-link-row">
                 <div className="contact-link-icon"><Mail size={18} /></div>
-                <span>shadaksharimaanvi@gmail.com</span>
+                <div className="contact-email-stack">
+                  <span className="email-primary">maanvishadakshari21@gmail.com</span>
+                  <span className="email-secondary">shadaksharimaanvi@gmail.com</span>
+                </div>
                 <ArrowRight size={16} className="contact-arrow" />
               </a>
               <a href="tel:+917208014200" className="contact-link-row">
@@ -61,7 +64,7 @@ const Contact = () => {
                 </a>
               </div>
               <div className="contact-cta">
-                <a href="mailto:shadaksharimaanvi@gmail.com" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                <a href="mailto:maanvishadakshari21@gmail.com" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
                   Get In Touch <Mail size={16} />
                 </a>
               </div>

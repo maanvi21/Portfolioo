@@ -124,7 +124,7 @@ const Hero = () => {
             <a href="https://behance.net" target="_blank" rel="noreferrer" className="icon-link" title="Behance">
               <BehanceIcon size={18} />
             </a>
-            <a href="mailto:shadaksharimaanvi@gmail.com" className="icon-link" title="Email">
+            <a href="mailto:maanvishadakshari21@gmail.com" className="icon-link" title="Email">
               <Mail size={18} />
             </a>
           </motion.div>
