@@ -1,0 +1,129 @@
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+}
+
+.ach-card {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+
+.ach-award {
+  grid-column: span 2;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.06), var(--bg-card));
+  border-color: rgba(255, 215, 0, 0.2);
+}
+
+.ach-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--accent-dim);
+  border: 1px solid var(--border-accent);
+  border-radius: 8px;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.ach-icon-award {
+  background: rgba(255, 215, 0, 0.1);
+  border-color: rgba(255, 215, 0, 0.3);
+  color: #ffd700;
+}
+
+.ach-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.15rem;
+  line-height: 1.3;
+}
+
+.ach-award .ach-title {
+  font-size: 1.15rem;
+  color: #ffd700;
+}
+
+.ach-org {
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.ach-desc {
+  font-size: 0.82rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+/* Co-curricular */
+.cocurr-block {
+  margin-top: 0.5rem;
+}
+
+.cocurr-title {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.cocurr-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+
+.cocurr-card {
+  padding: 1.2rem;
+}
+
+.cocurr-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.cocurr-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: var(--accent-dim);
+  border: 1px solid var(--border-accent);
+  border-radius: 6px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.cocurr-name {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.cocurr-period {
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.cocurr-desc {
+  font-size: 0.88rem;
+  color: var(--text-2);
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .achievements-grid { grid-template-columns: 1fr; }
+  .ach-award { grid-column: span 1; }
+  .cocurr-grid { grid-template-columns: 1fr; }
+}
