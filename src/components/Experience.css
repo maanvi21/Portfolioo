@@ -1,9 +1,95 @@
+.experience-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
 .timeline {
   display: flex;
   flex-direction: column;
   gap: 0;
-  max-width: 800px;
-  margin: 0 auto;
+}
+
+.exp-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  position: sticky;
+  top: 100px;
+}
+
+.exp-stat-card {
+  padding: 1.1rem;
+  text-align: center;
+}
+
+.exp-stat-num {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--mint);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.exp-stat-lbl {
+  font-size: 0.78rem;
+  color: var(--text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.exp-focus {
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.exp-focus-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-3);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.exp-focus-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-2);
+  line-height: 1.4;
+}
+
+.exp-quote {
+  padding: 1.2rem;
+  background: var(--pink-dim);
+  border-left: 4px solid var(--pink);
+}
+
+.exp-quote .why-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--pink);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.exp-quote p {
+  font-size: 0.88rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .experience-layout { grid-template-columns: 1fr; }
+  .exp-side { position: static; flex-direction: row; flex-wrap: wrap; }
+  .exp-side > * { flex: 1; min-width: 160px; }
 }
 
 .timeline-item {

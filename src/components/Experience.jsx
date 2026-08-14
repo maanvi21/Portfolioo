@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { PixelIcon } from './PixelArt';
 import AnimatedSection from './AnimatedSection';
 import './Experience.css';
 
@@ -62,6 +63,7 @@ const Experience = () => {
       <p className="section-subtitle">Six internships spanning cloud-adjacent infra, ML, data engineering, and full-stack — each one a completed quest.</p>
       <div className="section-divider" />
 
+      <div className="experience-layout">
       <div className="timeline">
         {experiences.map((exp, i) => (
           <motion.div
@@ -97,6 +99,39 @@ const Experience = () => {
             </div>
           </motion.div>
         ))}
+      </div>
+
+        <aside className="exp-side">
+          <div className="exp-stat-card card">
+            <div className="exp-stat-num">6</div>
+            <div className="exp-stat-lbl">Quests Completed</div>
+          </div>
+          <div className="exp-stat-card card">
+            <div className="exp-stat-num">1</div>
+            <div className="exp-stat-lbl">Currently Live</div>
+          </div>
+
+          <div className="exp-focus card">
+            <div className="exp-focus-label">Focus Areas</div>
+            <div className="exp-focus-row">
+              <PixelIcon name="rocket" size={16} />
+              <span>Cloud &amp; systems architecture</span>
+            </div>
+            <div className="exp-focus-row">
+              <PixelIcon name="sparkle" size={16} />
+              <span>ML pipelines &amp; RAG</span>
+            </div>
+            <div className="exp-focus-row">
+              <PixelIcon name="bolt" size={16} />
+              <span>Full-stack product delivery</span>
+            </div>
+          </div>
+
+          <div className="exp-quote">
+            <span className="why-label">Pattern I keep repeating</span>
+            <p>Every one of these was a live product or a real dataset — never a toy problem. I go looking for the version that has to actually work.</p>
+          </div>
+        </aside>
       </div>
     </AnimatedSection>
   );
