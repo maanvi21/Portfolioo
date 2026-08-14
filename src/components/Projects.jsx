@@ -7,13 +7,13 @@ import './Projects.css';
 const projects = [
   {
     Icon: MessageSquare,
-    title: 'RAG Q&A Chatbot',
-    built: 'GenAI · RAG Pipeline',
-    description: 'A retrieval-augmented Q&A system over documents pulled directly from Drive links — chunking, embedding generation, and FAISS-backed semantic retrieval feeding an LLM for grounded, context-aware answers.',
-    impact: 'Same RAG architecture pattern I later shipped in production at Altimetrik — document ingestion to grounded answers, end-to-end.',
-    tech: ['RAG', 'FAISS', 'HuggingFace', 'LLMs', 'Python'],
+    title: 'Production RAG Pipeline',
+    built: 'GenAI · System Design · Microservices',
+    description: 'A RAG assistant for internal engineering knowledge (runbooks, postmortems, architecture docs), built as staged system-design upgrades instead of a single script: service-separated ingestion and query APIs backed by Qdrant for vector search and MinIO for durable object storage, with a roadmap through async ingestion, hybrid search + caching, observability, and RAGAS-based evaluation.',
+    impact: 'Each phase deliberately targets one production concern — durability across restarts, decoupled scaling, cost control — turning the build into a system-design log, not just a working demo.',
+    tech: ['RAG', 'FastAPI', 'Qdrant', 'MinIO', 'Docker', 'Microservices'],
     featured: true,
-    github: 'https://github.com/maanvi21/QnA-Chatbot-using-Drive-Link',
+    github: 'https://github.com/maanvi21/production-rag-pipeline',
   },
   {
     Icon: TrendingUp,
