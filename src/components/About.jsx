@@ -1,35 +1,66 @@
 import { GraduationCap, Trophy, Rocket } from 'lucide-react';
+import { PixelIcon } from './PixelArt';
 import AnimatedSection from './AnimatedSection';
 import './About.css';
+
+const sideQuests = [
+  { icon: 'dumbbell', label: 'Fitness & lifting' },
+  { icon: 'mic', label: 'Singing' },
+  { icon: 'sparkle', label: 'Dancing' },
+  { icon: 'plane', label: 'Travel & adventure' },
+  { icon: 'rocket', label: 'Building things that scale' },
+  { icon: 'bolt', label: 'Chasing the next big idea' },
+];
 
 const About = () => {
   return (
     <AnimatedSection id="about" className="about-section">
-      <div className="about-layout">
+      <div className="section-label">Level 01 // Meet the Player</div>
+      <h2 className="section-title">Who I Am, Beyond the Code.</h2>
 
+      <div className="about-layout">
         {/* Left — bio text */}
         <div className="about-text">
-          <div className="section-label">Philosophy</div>
-          <h2 className="section-title">Beyond the Code.</h2>
-
           <div className="about-paragraphs">
             <p>
-              I bridge the gap between complex ML architectures and intuitive product experiences. 
-              Currently looking to bring this end-to-end ownership to high-impact AI and data-driven product teams.
+              I'm Maanvi — an engineer who's happiest in the layer most people never see: the cloud
+              infrastructure, the ML pipelines, the RAG systems quietly doing the heavy lifting behind
+              a good product. I care about what happens when a notebook prototype has to survive real
+              traffic, real users, real failure modes.
             </p>
-
             <div className="about-principles">
               <div className="principle">
                 <span className="principle-dot" />
-                <span><strong>Customer-First AI</strong>: Engineering systems that solve real human friction, not just optimizing metrics.</span>
+                <span><strong>Cloud-Native by Default</strong>: Designing for AWS/GCP from day one — containers, scalable services, infra that doesn't fall over.</span>
               </div>
               <div className="principle">
                 <span className="principle-dot" />
-                <span><strong>Production-Grade Reliability</strong>: Moving from notebook prototypes to high-availability, scalable microservices.</span>
+                <span><strong>ML That Ships</strong>: RAG pipelines, LLMs, and models that go from Jupyter to production, not just a demo.</span>
               </div>
               <div className="principle">
                 <span className="principle-dot" />
-                <span><strong>Design Thinking</strong>: Translating business needs into technical scopes that actually ship.</span>
+                <span><strong>Builder's Mindset</strong>: Constantly asking how to scale, how to do it better, how to get to the next level faster.</span>
+              </div>
+            </div>
+
+            <p className="about-outro">
+              Off the clock, I'm just as intense about it — I lift, I sing, I dance, I go looking for
+              the next adventure. Ambition isn't a switch I turn off after work; it's just how I'm wired.
+            </p>
+
+            <div className="side-quests">
+              <span className="section-label" style={{ marginBottom: '0.9rem' }}>
+                Side Quests
+                <PixelIcon name="cookie" size={14} />
+                <PixelIcon name="coffee" size={14} />
+              </span>
+              <div className="side-quest-grid">
+                {sideQuests.map((q) => (
+                  <div key={q.label} className="side-quest-chip">
+                    <PixelIcon name={q.icon} size={18} />
+                    <span>{q.label}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -44,7 +75,7 @@ const About = () => {
             <div>
               <h4 className="about-card-title">FCRIT, Vashi</h4>
               <p className="about-card-sub">B.Tech Computer Engineering (AI/ML Honours)</p>
-              <p className="about-card-val">CGPA 9.08</p>
+              <p className="about-card-val">CGPA 9.09</p>
             </div>
           </div>
 
@@ -64,22 +95,21 @@ const About = () => {
               <Rocket size={22} />
             </div>
             <div>
-              <h4 className="about-card-title">Kode & Co.</h4>
-              <p className="about-card-sub">Founder & Tech Lead · Apr 2025 – Present</p>
-              <p className="about-card-val">4+ live client contracts shipped</p>
+              <h4 className="about-card-title">Kode &amp; Co.</h4>
+              <p className="about-card-sub">Freelance Project Consultant · Apr 2025 – Present</p>
+              <p className="about-card-val">4+ client contracts delivered</p>
             </div>
           </div>
 
           <div className="about-stack">
-            <span className="section-label" style={{ marginBottom: 0 }}>Core stack</span>
+            <span className="section-label" style={{ marginBottom: 0 }}>Core Stack</span>
             <div className="about-tags">
-              {['Python', 'RAG', 'LLMs', 'React', 'FastAPI', 'Docker', 'GCP'].map(t => (
+              {['Python', 'AWS', 'GCP', 'Docker', 'Kubernetes', 'RAG', 'LLMs', 'FastAPI'].map(t => (
                 <span key={t} className="tag">{t}</span>
               ))}
             </div>
           </div>
         </div>
-
       </div>
     </AnimatedSection>
   );

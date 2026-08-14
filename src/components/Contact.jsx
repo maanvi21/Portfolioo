@@ -1,5 +1,6 @@
 import { Mail, Phone, ArrowRight, Globe } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
+import { PixelIcon } from './PixelArt';
 import AnimatedSection from './AnimatedSection';
 import './Contact.css';
 
@@ -14,22 +15,22 @@ const BehanceIcon = ({ size = 20 }) => (
 const Contact = () => {
   return (
     <section id="contact" className="contact-section section">
+      <div className="pixel-ground" aria-hidden="true" />
       <div className="contact-top-line" />
       <div className="container">
+        <div className="section-label" style={{ marginTop: '2.5rem' }}>Final Level // Contact</div>
         <div className="contact-layout">
           <div className="contact-left">
-            <div className="section-label">Contact</div>
             <h2 className="contact-heading">Let's build<br /><span className="contact-accent">something.</span></h2>
             <p className="contact-sub">
-              I'm open to ML engineering roles, AI/data internships, and high-impact projects.
+              I'm open to AI/ML engineering, cloud & infrastructure roles, GenAI internships, and high-impact projects.
               If you have an idea or an opening — let's talk.
             </p>
             <div className="contact-links-group">
-              <a href="mailto:maanvishadakshari21@gmail.com" className="contact-link-row">
+              <a href="mailto:shadaksharimaanvi@gmail.com" className="contact-link-row">
                 <div className="contact-link-icon"><Mail size={18} /></div>
                 <div className="contact-email-stack">
-                  <span className="email-primary">maanvishadakshari21@gmail.com</span>
-                  <span className="email-secondary">shadaksharimaanvi@gmail.com</span>
+                  <span className="email-primary">shadaksharimaanvi@gmail.com</span>
                 </div>
                 <ArrowRight size={16} className="contact-arrow" />
               </a>
@@ -38,7 +39,7 @@ const Contact = () => {
                 <span>+91 7208014200</span>
                 <ArrowRight size={16} className="contact-arrow" />
               </a>
-              <a href="https://kodeandco.online" target="_blank" rel="noreferrer" className="contact-link-row">
+              <a href="https://www.kodeandco.online/" target="_blank" rel="noreferrer" className="contact-link-row">
                 <div className="contact-link-icon"><Globe size={18} /></div>
                 <span>kodeandco.online</span>
                 <ArrowRight size={16} className="contact-arrow" />
@@ -50,21 +51,21 @@ const Contact = () => {
             <div className="contact-card card">
               <div className="contact-card-label">Find me on</div>
               <div className="contact-socials">
-                <a href="https://github.com" target="_blank" rel="noreferrer" className="social-pill">
+                <a href="https://github.com/maanvi21" target="_blank" rel="noreferrer" className="social-pill">
                   <GithubIcon size={18} />
                   GitHub
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-pill">
+                <a href="https://www.linkedin.com/in/maanvi-shadakshari/" target="_blank" rel="noreferrer" className="social-pill">
                   <LinkedinIcon size={18} />
                   LinkedIn
                 </a>
-                <a href="https://behance.net" target="_blank" rel="noreferrer" className="social-pill">
+                <a href="https://behance.net/maanvishadakshari" target="_blank" rel="noreferrer" className="social-pill">
                   <BehanceIcon size={18} />
                   Behance
                 </a>
               </div>
               <div className="contact-cta">
-                <a href="mailto:maanvishadakshari21@gmail.com" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                <a href="mailto:shadaksharimaanvi@gmail.com" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
                   Get In Touch <Mail size={16} />
                 </a>
               </div>
@@ -73,17 +74,20 @@ const Contact = () => {
             <div className="contact-open-to">
               <div className="open-label">Currently open to</div>
               <div className="open-tags">
-                <span className="open-tag">ML Engineering</span>
-                <span className="open-tag">AI / Data Internships</span>
-                <span className="open-tag">Full-Stack Projects</span>
-                <span className="open-tag">Research Collaborations</span>
+                <span className="open-tag">AI / ML Engineering</span>
+                <span className="open-tag">Cloud & Infrastructure</span>
+                <span className="open-tag">GenAI / RAG Projects</span>
+                <span className="open-tag">Full-Stack Builds</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="contact-footer">
-          <p>© {new Date().getFullYear()} Maanvi Shadakshari · Built with precision.</p>
+          <p className="footer-signoff">
+            <PixelIcon name="heart" size={14} /> Maanvi Shadakshari · Built pixel by pixel
+            <PixelIcon name="coffee" size={14} /> {new Date().getFullYear()}
+          </p>
           <div className="footer-links">
             <a href="#hero">Back to top ↑</a>
           </div>

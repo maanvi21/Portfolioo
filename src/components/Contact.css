@@ -177,11 +177,10 @@
 .open-tag {
   padding: 0.4rem 0.9rem;
   background: var(--accent-dim);
-  border: 1px solid var(--border-accent);
+  border: 2px solid var(--border-accent);
   color: var(--accent);
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 /* Footer */
@@ -190,9 +189,15 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
-  border-top: 1px solid var(--border);
-  font-size: 0.82rem;
+  border-top: 2px solid var(--border);
+  font-size: 0.85rem;
   color: var(--text-3);
+}
+
+.footer-signoff {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .footer-links {

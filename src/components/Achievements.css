@@ -75,8 +75,15 @@
 
 .cocurr-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 0.6rem;
+}
+
+.cocurr-role {
+  font-size: 0.82rem;
+  color: var(--text-2);
+  font-weight: 600;
+  margin-bottom: 0.15rem;
 }
 
 .cocurr-card {

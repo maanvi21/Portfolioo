@@ -5,8 +5,8 @@ import './Ventures.css';
 const Ventures = () => {
   return (
     <AnimatedSection id="ventures" className="ventures-section">
-      <div className="section-label">Ventures</div>
-      <h2 className="section-title">Entrepreneurial Work</h2>
+      <div className="section-label">Level 05 // Kode &amp; Co.</div>
+      <h2 className="section-title">Freelance Project Work</h2>
       <div className="section-divider" />
 
       <div className="venture-layout">
@@ -15,7 +15,7 @@ const Ventures = () => {
             <div>
               <div className="venture-name-row">
                 <h3 className="venture-name">Kode & Co.</h3>
-                <span className="venture-badge">Founder & Tech Lead</span>
+                <span className="venture-badge">Freelance Project Consultant</span>
               </div>
               <a href="https://www.kodeandco.online" target="_blank" rel="noreferrer" className="venture-url">
                 www.kodeandco.online <ExternalLink size={14} />
@@ -25,8 +25,9 @@ const Ventures = () => {
           </div>
 
           <p className="venture-desc">
-            Started a freelance digital solutions venture — closed 4+ client contracts including CIBA Mumbai and Tusk Oral Care
-            by leading sales meetings and translating business needs into technical scopes.
+            I take on client work through Kode & Co. as a freelance project consultant — brought in project by project
+            to own technical delivery end-to-end. Closed 4+ client contracts including CIBA Mumbai and Tusk Oral Care,
+            leading sales meetings and translating business needs into technical scopes.
           </p>
 
           <div className="venture-built">
@@ -41,7 +42,7 @@ const Ventures = () => {
 
           <div className="venture-why">
             <span className="why-label">Why it matters</span>
-            <p>Running Kode & Co. means I've operated as engineer, product manager, and client lead simultaneously. I know what it takes to ship something real.</p>
+            <p>Every Kode & Co. project puts me back in the role clients trust for full delivery — architecture, build, and launch — on a project basis. It's where I get to run things my way and prove I can scale from idea to shipped product.</p>
           </div>
         </div>
 

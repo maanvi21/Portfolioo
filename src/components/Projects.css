@@ -14,7 +14,7 @@
 
 .project-featured {
   grid-column: span 2;
-  background: linear-gradient(160deg, rgba(0,229,255,0.06), var(--bg-card));
+  background: linear-gradient(160deg, rgba(77,255,180,0.08), var(--bg-card));
   border-color: var(--border-accent);
 }
 
@@ -114,9 +114,8 @@
   flex-direction: column;
   gap: 0.2rem;
   padding: 0.5rem 0.75rem;
-  background: rgba(0, 229, 255, 0.04);
-  border-left: 2px solid var(--accent);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--pink-dim);
+  border-left: 3px solid var(--pink);
   margin-bottom: 0.65rem;
 }
 
@@ -124,7 +123,7 @@
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--accent);
+  color: var(--pink);
   font-weight: 700;
 }
 

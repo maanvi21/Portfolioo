@@ -10,7 +10,7 @@
 
 .skill-card--featured {
   grid-column: span 2;
-  background: linear-gradient(135deg, rgba(0, 229, 255, 0.06), rgba(17, 28, 43, 0.7));
+  background: linear-gradient(135deg, rgba(77, 255, 180, 0.08), rgba(15, 15, 26, 0.85));
   border-color: var(--border-accent);
 }
 

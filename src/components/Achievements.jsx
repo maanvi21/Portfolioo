@@ -1,4 +1,4 @@
-import { Trophy, GraduationCap, FileText, Bot, Layers } from 'lucide-react';
+import { Trophy, GraduationCap, BrainCircuit, Database, Cloud, Bot } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import './Achievements.css';
 
@@ -12,46 +12,48 @@ const achievements = [
   },
   {
     Icon: GraduationCap,
-    title: 'CGPA 9.08',
+    title: 'CGPA 9.09 / 10',
     org: 'B.Tech Computer Engineering with Honours in AI/ML · FCRIT',
-    desc: 'Consistently high academic performance across all semesters while simultaneously running internships and a freelance venture.',
+    desc: 'Consistently high academic performance across all semesters while simultaneously running internships and freelance client work.',
     type: 'academic',
   },
   {
-    Icon: FileText,
-    title: 'AWS Academy — IoT and Cloud Computing Laboratory',
-    org: 'Amazon Web Services',
-    desc: 'Hands-on certification covering IoT architectures, cloud infrastructure, and AWS cloud services.',
+    Icon: BrainCircuit,
+    title: 'Deep Learning Specialization',
+    org: 'DeepLearning.AI / Coursera · 2026',
+    desc: '5-course specialization covering Neural Networks, Hyperparameter Tuning, CNNs, Sequence Models, and Structuring ML Projects.',
     type: 'cert',
   },
   {
-    Icon: Layers,
-    title: 'Data Mining and Business Intelligence · Big Data Analytics',
-    org: 'Major Elective — Semester VI',
-    desc: 'Comprehensive training in data mining, business intelligence workflows, and large-scale data analytics methodologies.',
-    type: 'academic',
+    Icon: Database,
+    title: 'SQL (Intermediate)',
+    org: 'HackerRank · 2026',
+    desc: 'Covers complex joins, aggregations, subqueries, and window functions — Advanced SQL certificate in progress.',
+    type: 'cert',
+  },
+  {
+    Icon: Cloud,
+    title: 'IoT & Cloud Computing',
+    org: 'AWS Academy · Relevant Coursework',
+    desc: 'Hands-on coursework covering IoT architectures, cloud infrastructure design, and AWS cloud services.',
+    type: 'cert',
   },
 ];
 
 const cocurricular = [
   {
     Icon: Bot,
-    title: 'Agnel Robotics Club, FCRIT',
-    period: 'Jun 2025 – Present',
-    desc: 'Building object detection & classification pipelines using OpenCV and YOLO for ROBOCON 2026. Programming microcontroller systems via Arduino IDE. Mentoring juniors on robotics fundamentals.',
-  },
-  {
-    Icon: Layers,
-    title: 'AI & Deep Learning Club, FCRIT',
-    period: 'Jun 2024 – Jun 2025',
-    desc: 'Jr. Technical Coordinator — organised Webrush (100+ participants), managed web infrastructure, built the official HackQuinox website and multiple club platforms end-to-end.',
+    title: 'Agnel Robotics Club & AI/DL Club, FCRIT',
+    period: 'Jun 2024 – Present',
+    role: 'Technical Team Member (ROBOCON 2026) · Jr. Technical Coordinator',
+    desc: 'Building YOLO + OpenCV object detection pipelines and programming microcontrollers via Arduino IDE for ROBOCON. Organised Webrush (100+ participants) and built the official HackQuinox website.',
   },
 ];
 
 const Achievements = () => {
   return (
     <AnimatedSection id="achievements" className="achievements-section">
-      <div className="section-label">Recognition</div>
+      <div className="section-label">Level 06 // High Scores</div>
       <h2 className="section-title">Achievements & Certifications</h2>
       <div className="section-divider" />
 
@@ -82,6 +84,7 @@ const Achievements = () => {
                 </div>
                 <div>
                   <div className="cocurr-name">{c.title}</div>
+                  <div className="cocurr-role">{c.role}</div>
                   <div className="cocurr-period">{c.period}</div>
                 </div>
               </div>
