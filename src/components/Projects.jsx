@@ -14,7 +14,6 @@ const projects = [
     description: 'A RAG assistant for internal engineering knowledge (runbooks, postmortems, architecture docs), built as staged system-design upgrades instead of a single script: service-separated ingestion and query APIs backed by Qdrant for vector search and MinIO for durable object storage, with a roadmap through async ingestion, hybrid search + caching, observability, and RAGAS-based evaluation.',
     impact: 'Each phase deliberately targets one production concern — durability across restarts, decoupled scaling, cost control — turning the build into a system-design log, not just a working demo.',
     tech: ['RAG', 'FastAPI', 'Qdrant', 'MinIO', 'Docker', 'Microservices'],
-    featured: true,
     github: 'https://github.com/maanvi21/production-rag-pipeline',
   },
   {
