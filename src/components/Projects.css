@@ -1,8 +1,140 @@
-.projects-bento {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: min-content;
+/* FOLDER TABS — stacked pixel tabs above the panel */
+.projects-tabs {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  z-index: 2;
+  margin-top: -0.5rem;
+}
+
+.projects-tab {
+  display: flex;
+  align-items: center;
   gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  background: var(--bg-2);
+  border: var(--px) solid var(--pink);
+  border-bottom: none;
+  padding: 0.75rem 1.6rem 0.75rem 1.1rem;
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 100%, 0 100%);
+  margin-right: -14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.projects-tab:hover {
+  color: var(--text);
+}
+
+.projects-tab .tab-arrow {
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+.projects-tab.active {
+  background: var(--pink);
+  color: #1a0210;
+  z-index: 3;
+  padding-bottom: 0.9rem;
+}
+
+.projects-tab.active .tab-arrow {
+  opacity: 0.85;
+}
+
+/* PANEL — pink-tinted frame the tabs "open" into */
+.projects-panel {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(160deg, rgba(255, 46, 147, 0.1), var(--bg-card));
+  border: var(--px) solid var(--pink);
+  padding: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+/* BOOKMARKS — numbered mission-select strip */
+.projects-bookmarks {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px dashed var(--border);
+}
+
+.bookmarks-label {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pink);
+  white-space: nowrap;
+}
+
+.bookmarks-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.bookmark-chip {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--text-2);
+  background: var(--bg-2);
+  border: 2px solid var(--pink);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.bookmark-chip:hover,
+.bookmark-chip:focus-visible {
+  background: var(--pink);
+  color: #1a0210;
+  transform: translateY(-2px);
+}
+
+.bookmark-chip.active {
+  background: var(--pink);
+  color: #1a0210;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.35);
+}
+
+/* SINGLE PROJECT VIEW */
+.project-single-wrap {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.project-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  flex-shrink: 0;
+  background: var(--bg-2);
+  border: 2px solid var(--border);
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.project-nav-btn:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+  background: var(--pink-dim);
 }
 
 .project-card {
@@ -12,10 +144,53 @@
   padding: 1.1rem !important;
 }
 
+.project-single {
+  flex: 1;
+  min-width: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem !important;
+  animation: card-fade 0.25s ease;
+}
+
+@keyframes card-fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .project-featured {
-  grid-column: span 2;
   background: linear-gradient(160deg, rgba(77,255,180,0.08), var(--bg-card));
   border-color: var(--border-accent);
+}
+
+.window-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.7rem;
+  border-bottom: 2px dashed var(--border);
+}
+
+.window-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+}
+
+.dot-pink { background: var(--pink); }
+.dot-gold { background: var(--gold); }
+.dot-mint { background: var(--mint); }
+
+.window-path {
+  margin-left: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-3);
+  letter-spacing: 0.02em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .project-top {
@@ -56,7 +231,7 @@
 }
 
 .action-label {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -71,11 +246,11 @@
 }
 
 .project-title {
-  font-size: 0.92rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--text);
-  margin-bottom: 0.25rem;
-  line-height: 1.3;
+  margin-bottom: 0.3rem;
+  line-height: 1.35;
 }
 
 .project-card:hover .project-title {
@@ -83,19 +258,19 @@
 }
 
 .project-built {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--accent);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .project-desc {
-  font-size: 0.84rem;
+  font-size: 0.98rem;
   color: var(--text-2);
-  line-height: 1.6;
-  margin-bottom: 0.6rem;
+  line-height: 1.65;
+  margin-bottom: 0.7rem;
 }
 
 .project-impact {
@@ -109,7 +284,7 @@
 }
 
 .impact-label {
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--pink);
@@ -117,9 +292,9 @@
 }
 
 .impact-text {
-  font-size: 0.85rem;
+  font-size: 0.98rem;
   color: var(--text-2);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .project-tags {
@@ -128,12 +303,24 @@
   gap: 0.4rem;
 }
 
-@media (max-width: 900px) {
-  .projects-bento { grid-template-columns: repeat(2, 1fr); }
-  .project-featured { grid-column: span 2; }
+.project-tags .tag {
+  font-size: 0.92rem;
 }
 
-@media (max-width: 560px) {
-  .projects-bento { grid-template-columns: 1fr; }
-  .project-featured { grid-column: span 1; }
+@media (max-width: 640px) {
+  .projects-tabs {
+    flex-wrap: wrap;
+    row-gap: 0.4rem;
+  }
+  .projects-tab {
+    clip-path: none;
+    margin-right: 0.3rem;
+    border-bottom: var(--px) solid var(--pink);
+    padding: 0.6rem 1rem;
+  }
+  .projects-tab.active { padding-bottom: 0.6rem; }
+
+  .project-single-wrap { gap: 0.5rem; }
+  .project-nav-btn { width: 32px; }
+  .project-single { padding: 1.3rem !important; }
 }
