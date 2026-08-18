@@ -36,6 +36,7 @@ const projects = [
     impact: 'Reconstructs visual lines from PDFs to prevent NLP truncation; delivers grounded, field-specific skill rewrites and career-path suggestions.',
     tech: ['FastAPI', 'Gemini 2.5', 'HuggingFace', 'PyTorch', 'RAG'],
     github: 'https://github.com/maanvi21/Smart-Resume-Analyser',
+    architecture: 'https://github.com/maanvi21/Smart-Resume-Analyser/blob/main/README.md',
   },
   {
     Icon: Settings2,
