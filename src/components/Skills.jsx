@@ -27,14 +27,14 @@ const skills = [
     items: ['Python', 'FastAPI', 'Flask', 'Node.js', 'Express.js', 'ASP.NET', 'Supabase'],
   },
   {
-    category: 'Frontend',
-    Icon: Monitor,
-    items: ['React.js', 'Next.js', 'React Native', 'Flutter', 'JavaScript'],
-  },
-  {
     category: 'Databases & Tools',
     Icon: Database,
     items: ['MySQL', 'MongoDB', 'Postgres', 'Git / GitHub', 'OAuth 2.0', 'RBAC', 'Figma'],
+  },
+  {
+    category: 'Frontend',
+    Icon: Monitor,
+    items: ['React.js', 'Next.js', 'React Native', 'Flutter', 'JavaScript'],
   },
 ];
 

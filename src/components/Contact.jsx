@@ -76,8 +76,8 @@ const Contact = () => {
               <div className="open-tags">
                 <span className="open-tag">AI / ML Engineering</span>
                 <span className="open-tag">Cloud & Infrastructure</span>
+                <span className="open-tag">Data Engineering</span>
                 <span className="open-tag">GenAI / RAG Projects</span>
-                <span className="open-tag">Full-Stack Builds</span>
               </div>
             </div>
           </div>

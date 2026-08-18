@@ -78,11 +78,11 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.35, duration: 0.5 }}
           >
-            <span>Cloud &amp; Infra Engineer</span>
+            <span>AI / ML Engineer</span>
             <span className="divider-dot">✦</span>
-            <span>AI / ML / GenAI</span>
+            <span>Cloud Infrastructure</span>
             <span className="divider-dot">✦</span>
-            <span>Full-Stack Builder</span>
+            <span>GenAI / RAG</span>
           </motion.div>
 
           <motion.p
