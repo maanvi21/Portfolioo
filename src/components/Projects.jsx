@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MessageSquare, TrendingUp, Settings2, FileSearch, Stethoscope, Bot, ExternalLink, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { MessageSquare, TrendingUp, Settings2, FileSearch, Stethoscope, Bot, ExternalLink, ArrowRight, ChevronLeft, ChevronRight, Layers } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { PixelIcon } from './PixelArt';
 import AnimatedSection from './AnimatedSection';
@@ -15,6 +15,7 @@ const projects = [
     impact: 'Each phase deliberately targets one production concern — durability across restarts, decoupled scaling, cost control — turning the build into a system-design log, not just a working demo.',
     tech: ['RAG', 'FastAPI', 'Qdrant', 'MinIO', 'Docker', 'Microservices'],
     github: 'https://github.com/maanvi21/production-rag-pipeline',
+    architecture: 'https://github.com/maanvi21/production-rag-pipeline/blob/main/ARCHITECTURE.md',
   },
   {
     Icon: TrendingUp,
@@ -151,6 +152,12 @@ const Projects = () => {
                   <a href={p.live} target="_blank" rel="noreferrer" className="project-action" title="Live">
                     <span className="action-label">Live Demo</span>
                     <ExternalLink size={15} />
+                  </a>
+                )}
+                {p.architecture && (
+                  <a href={p.architecture} target="_blank" rel="noreferrer" className="project-action" title="Architecture">
+                    <span className="action-label">Architecture</span>
+                    <Layers size={15} />
                   </a>
                 )}
               </div>
